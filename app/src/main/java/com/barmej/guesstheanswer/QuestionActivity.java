@@ -14,7 +14,7 @@ public class QuestionActivity extends AppCompatActivity {
     private static final String[] QUESTIONS = {
             "العملة الرسمية لدولة الكويت هي الريال الكويتي؟",
             "توبقال هي أعلى قمة جبلية في العالم العربي؟",
-            "الجزائر هلي أكبر دولة عربية من حيث المساحة؟",
+            "الجزائر هي أكبر دولة عربية من حيث المساحة؟",
             "الدار البيضاء هي عاصمة المغرب؟"};
 
     private static final boolean[] ANSWERS = {
@@ -37,7 +37,7 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question);
+        setContentView(R.layout.activity_question_new);
 
         tvQuestion = findViewById(R.id.text_view_question);
         showNewQuestion();
