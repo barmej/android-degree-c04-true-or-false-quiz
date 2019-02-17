@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Devinez la réponse</string>
+    <string name="false_text">Faux</string>
+    <string name="true_text">Vrai</string>
+    <string name="share_question_text">Partagez la question</string>
+    <string name="change_question_text">Changer la question</string>
+    <string name="back_text">Retour</string>
+    <string name="share_title_hint">Entrez un titre pour ce sujet</string>
+    <string name="change_lang_text">Changer la langue</string>
+    <string-array name="questions">
+        <item>La monnaie officielle du Koweït est le riyal koweïtien?</item>
+        <item>Toubkal est le plus haut sommet du monde arabe?</item>
+        <item>L\'Algérie est le plus grand pays arabe en termes d\'espace?</item>
+        <item>Casablanca est la capitale du Maroc?</item>
+    </string-array>
+    <string-array name="answers_details">
+        <item>La monnaie officielle du Koweït est le dinar koweïtien.</item>
+        <item>Topkale est le plus haut sommet du monde arabe et se situe au Maroc</item>
+        <item>L\'Algérie est le plus grand pays arabe et africain en termes de superficie</item>
+        <item>Rabat est la capitale du Maroc</item>
+    </string-array>
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_change_lang"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/change_lang_text"
+        app:showAsAction="ifRoom" />
+</menu>

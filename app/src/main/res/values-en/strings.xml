@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Guess the answer</string>
+    <string name="false_text">False</string>
+    <string name="true_text">True</string>
+    <string name="share_question_text">Share the question</string>
+    <string name="change_question_text">Change the question</string>
+    <string name="back_text">Return</string>
+    <string name="share_title_hint">Enter a title for this subject</string>
+    <string name="change_lang_text">Change Language</string>
+    <string-array name="questions">
+        <item>The official currency of Kuwait is the Kuwaiti riyal?</item>
+        <item>Toubkal is the highest peak in the Arab world?</item>
+        <item>Algeria is the largest Arab country in terms of space?</item>
+        <item>Casablanca is the capital of Morocco?</item>
+    </string-array>
+    <string-array name="answers_details">
+        <item>The official currency of Kuwait is the Kuwaiti Dinar</item>
+        <item>Topkale is the highest mountain peak in the Arab world and located in Morocco</item>
+        <item>Algeria is the largest Arab and African country in terms of area</item>
+        <item>Rabat is the capital of Morocco</item>
+    </string-array>
+</resources>

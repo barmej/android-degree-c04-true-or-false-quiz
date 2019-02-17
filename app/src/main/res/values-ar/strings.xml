@@ -7,11 +7,6 @@
     <string name="back_text">الرجوع</string>
     <string name="share_title_hint">أدخل عنوان المشاركة</string>
     <string name="change_lang_text">تغيير اللغة</string>
-    <string-array name="languages">
-        <item>العربية</item>
-        <item>English</item>
-        <item>Français</item>
-    </string-array>
     <string-array name="questions">
         <item>العملة الرسمية لدولة الكويت هي الريال الكويتي؟</item>
         <item>توبقال هي أعلى قمة جبلية في العالم العربي؟</item>
