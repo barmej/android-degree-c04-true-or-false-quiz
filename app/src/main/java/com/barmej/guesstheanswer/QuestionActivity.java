@@ -2,6 +2,7 @@ package com.barmej.guesstheanswer;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -34,6 +35,11 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
+        String appLang = sharedPreferences.getString("app_lang", "");
+        if (!appLang.equals(""))
+            LocaleHelper.setLocale(this, appLang);
+
         setContentView(R.layout.activity_question);
 
         QUESTIONS = getResources().getStringArray(R.array.questions);
@@ -79,13 +85,22 @@ public class QuestionActivity extends AppCompatActivity {
                                 language = "fr";
                                 break;
                         }
+
+                        saveLanguage(language);
                         LocaleHelper.setLocale(QuestionActivity.this, language);
                         recreate();
+
                     }
                 }).create();
         alertDialog.show();
     }
 
+    private void saveLanguage(String lang) {
+        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("app_lang", lang);
+        editor.apply();
+    }
 
     private void showNewQuestion() {
         Random random = new Random();
