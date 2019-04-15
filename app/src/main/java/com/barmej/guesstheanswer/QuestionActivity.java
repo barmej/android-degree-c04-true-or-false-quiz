@@ -88,8 +88,12 @@ public class QuestionActivity extends AppCompatActivity {
 
                         saveLanguage(language);
                         LocaleHelper.setLocale(QuestionActivity.this, language);
-                        recreate();
-
+//                        recreate();
+                        Intent i = new Intent(getApplicationContext(),
+                               QuestionActivity.class);
+                        i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(i);
                     }
                 }).create();
         alertDialog.show();
@@ -123,10 +127,10 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void onTrueClicked(View view) {
         if (mCurrentAnswer == true) {
-            Toast.makeText(this, "إجابة صحيحة", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.true_text), Toast.LENGTH_SHORT).show();
             showNewQuestion();
         } else {
-            Toast.makeText(this, "إجابة خاطئة", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.false_text), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
             intent.putExtra("question_answer", mCurrentAnswerDetail);
             startActivity(intent);
@@ -135,10 +139,10 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void onFalseClicked(View view) {
         if (mCurrentAnswer == false) {
-            Toast.makeText(this, "إجابة صحيحة", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.true_text), Toast.LENGTH_SHORT).show();
             showNewQuestion();
         } else {
-            Toast.makeText(this, "إجابة خاطئة", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.false_text), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
             intent.putExtra("question_answer", mCurrentAnswerDetail);
             startActivity(intent);
