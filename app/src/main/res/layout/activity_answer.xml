@@ -35,11 +35,11 @@
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
-            android:background="@android:color/holo_orange_light"
             android:onClick="onReturnClicked"
             android:text="الرجوع"
             android:textColor="@android:color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:textSize="20sp"/>
+            app:layout_constraintStart_toStartOf="parent" android:textSize="20sp"
+            android:background="@color/colorAccent"/>
 </android.support.constraint.ConstraintLayout>
