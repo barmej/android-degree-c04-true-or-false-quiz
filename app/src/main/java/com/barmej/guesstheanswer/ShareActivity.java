@@ -19,13 +19,13 @@ public class ShareActivity extends AppCompatActivity {
 
         mEditTextShareTitle = findViewById(R.id.edit_text_share_title);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
-        String questionTitle = sharedPreferences.getString("share_title", "");
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF, MODE_PRIVATE);
+        String questionTitle = sharedPreferences.getString(Constants.SHARE_TITLE, "");
         mEditTextShareTitle.setText(questionTitle);
     }
 
     public void onShareQuestionClicked(View view) {
-        String questionText = getIntent().getStringExtra("question_text_extra");
+        String questionText = getIntent().getStringExtra(Constants.QUESTION_TEXT_EXTRA);
 
         String questionTitle = mEditTextShareTitle.getText().toString();
         Intent shareIntent = new Intent();
@@ -34,9 +34,9 @@ public class ShareActivity extends AppCompatActivity {
         shareIntent.setType("text/plain");
         startActivity(shareIntent);
 
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("share_title", questionTitle);
+        editor.putString(Constants.SHARE_TITLE, questionTitle);
         editor.apply();
     }
 }

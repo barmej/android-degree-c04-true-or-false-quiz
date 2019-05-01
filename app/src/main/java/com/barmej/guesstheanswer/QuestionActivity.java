@@ -37,7 +37,7 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_question_new);
+        setContentView(R.layout.activity_question);
 
         tvQuestion = findViewById(R.id.text_view_question);
         showNewQuestion();
@@ -45,7 +45,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void showNewQuestion() {
         Random random = new Random();
-        int randomQuestionIndex = random.nextInt(QUESTIONS.length - 1);
+        int randomQuestionIndex = random.nextInt(QUESTIONS.length);
         mCurrentQuestion = QUESTIONS[randomQuestionIndex];
         mCurrentAnswer = ANSWERS[randomQuestionIndex];
         mCurrentAnswerDetail = ANSWERS_DETAILS[randomQuestionIndex];
@@ -58,7 +58,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void onShareQuestionClicked(View view) {
         Intent intent = new Intent(QuestionActivity.this, ShareActivity.class);
-        intent.putExtra("question_text_extra", mCurrentQuestion);
+        intent.putExtra(Constants.QUESTION_TEXT_EXTRA, mCurrentQuestion);
         startActivity(intent);
     }
 
@@ -69,7 +69,7 @@ public class QuestionActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "إجابة خاطئة", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
-            intent.putExtra("question_answer", mCurrentAnswerDetail);
+            intent.putExtra(Constants.QUESTION_ANSWER, mCurrentAnswerDetail);
             startActivity(intent);
         }
     }
@@ -81,7 +81,7 @@ public class QuestionActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "إجابة خاطئة", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
-            intent.putExtra("question_answer", mCurrentAnswerDetail);
+            intent.putExtra(Constants.QUESTION_ANSWER, mCurrentAnswerDetail);
             startActivity(intent);
         }
     }
