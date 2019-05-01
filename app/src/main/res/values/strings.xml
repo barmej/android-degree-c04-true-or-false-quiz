@@ -7,6 +7,9 @@
     <string name="back_text">الرجوع</string>
     <string name="share_title_hint">أدخل عنوان المشاركة</string>
     <string name="change_lang_text">تغيير اللغة</string>
+    <string name="question">السؤال</string>
+    <string name="the_right_answer_is">الإجابة الصحيحة هي</string>
+    <string name="share_the_question_with_friends">شارك السؤال مع الأصدقاء</string>
     <string-array name="languages">
         <item>العربية</item>
         <item>English</item>

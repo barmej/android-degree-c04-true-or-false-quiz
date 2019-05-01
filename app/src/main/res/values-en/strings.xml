@@ -7,6 +7,9 @@
     <string name="back_text">Return</string>
     <string name="share_title_hint">Enter a title for this subject</string>
     <string name="change_lang_text">Change Language</string>
+    <string name="question">Question</string>
+    <string name="the_right_answer_is">The right answer is</string>
+    <string name="share_the_question_with_friends">Share the question with friends</string>
     <string-array name="questions">
         <item>The official currency of Kuwait is the Kuwaiti riyal?</item>
         <item>Toubkal is the highest peak in the Arab world?</item>

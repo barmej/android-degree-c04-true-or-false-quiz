@@ -46,7 +46,6 @@ public class QuestionActivity extends AppCompatActivity {
         ANSWERS_DETAILS = getResources().getStringArray(R.array.answers_details);
 
         mTextViewQuestion = findViewById(R.id.text_view_question);
-        mTextViewQuestion.setText(QUESTIONS[0]);
         showNewQuestion();
     }
 
@@ -108,7 +107,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void showNewQuestion() {
         Random random = new Random();
-        int randomQuestionIndex = random.nextInt(QUESTIONS.length - 1);
+        int randomQuestionIndex = random.nextInt(QUESTIONS.length);
         mCurrentQuestion = QUESTIONS[randomQuestionIndex];
         mCurrentAnswer = ANSWERS[randomQuestionIndex];
         mCurrentAnswerDetail = ANSWERS_DETAILS[randomQuestionIndex];

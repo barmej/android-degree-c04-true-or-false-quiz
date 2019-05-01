@@ -7,6 +7,9 @@
     <string name="back_text">Retour</string>
     <string name="share_title_hint">Entrez un titre pour ce sujet</string>
     <string name="change_lang_text">Changer la langue</string>
+    <string name="question">Question</string>
+    <string name="the_right_answer_is">la bonne réponse est</string>
+    <string name="share_the_question_with_friends">Partagez la question avec des amis</string>
     <string-array name="questions">
         <item>La monnaie officielle du Koweït est le riyal koweïtien?</item>
         <item>Toubkal est le plus haut sommet du monde arabe?</item>
