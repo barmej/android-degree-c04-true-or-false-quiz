@@ -35,8 +35,8 @@ public class QuestionActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
-        String appLang = sharedPreferences.getString("app_lang", "");
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF, MODE_PRIVATE);
+        String appLang = sharedPreferences.getString(Constants.APP_LANG, "");
         if (!appLang.equals(""))
             LocaleHelper.setLocale(this, appLang);
 
@@ -99,9 +99,9 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void saveLanguage(String lang) {
-        SharedPreferences sharedPreferences = getSharedPreferences("app_pref", MODE_PRIVATE);
+        SharedPreferences sharedPreferences = getSharedPreferences(Constants.APP_PREF, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("app_lang", lang);
+        editor.putString(Constants.APP_LANG, lang);
         editor.apply();
     }
 
@@ -120,7 +120,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     public void onShareQuestionClicked(View view) {
         Intent intent = new Intent(QuestionActivity.this, ShareActivity.class);
-        intent.putExtra("question_text_extra", mCurrentQuestion);
+        intent.putExtra(Constants.QUESTION_TEXT_EXTRA, mCurrentQuestion);
         startActivity(intent);
     }
 
@@ -131,7 +131,7 @@ public class QuestionActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, getString(R.string.false_text), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
-            intent.putExtra("question_answer", mCurrentAnswerDetail);
+            intent.putExtra(Constants.QUESTION_ANSWER, mCurrentAnswerDetail);
             startActivity(intent);
         }
     }
@@ -143,7 +143,7 @@ public class QuestionActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, getString(R.string.false_text), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(QuestionActivity.this, AnswerActivity.class);
-            intent.putExtra("question_answer", mCurrentAnswerDetail);
+            intent.putExtra(Constants.QUESTION_ANSWER, mCurrentAnswerDetail);
             startActivity(intent);
         }
     }
