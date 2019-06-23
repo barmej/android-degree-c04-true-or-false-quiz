@@ -1,9 +1,8 @@
 package com.barmej.guesstheanswer;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class AnswerActivity extends AppCompatActivity {
@@ -16,7 +15,7 @@ public class AnswerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_answer);
 
         mTextViewAnswer = findViewById(R.id.text_view_answer);
-        String answer = getIntent().getStringExtra("question_answer");
+        String answer = getIntent().getStringExtra(Constants.QUESTION_ANSWER);
         if (answer != null)
             mTextViewAnswer.setText(answer);
     }
